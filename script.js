@@ -1,9 +1,10 @@
 let body = document.querySelector("body");
 let ul = document.querySelector("ul");
+let toggle = document.getElementById("toggle")
+
 
 // Theme ======
 
-let toggle = document.getElementById("toggle")
 let themebtn = document.querySelector(".themebtn");
 let circle = document.getElementById("circle");
 
@@ -33,6 +34,7 @@ if (saveTheme === "dark") {
     body.classList.add("dark");
     circle.innerHTML = `<i class="fa-solid fa-moon"></i>`
     ul.style.color = "black"
+    toggle.style.color = "black"
 } else {
 
     body.classList.add("light");
@@ -49,6 +51,7 @@ themebtn.addEventListener("click", () => {
         body.classList.replace("light", "dark");
         circle.innerHTML = `<i class="fa-solid fa-moon"></i>`
         ul.style.color = "black"
+        toggle.style.color = "black"
 
         localStorage.setItem("theme", "dark");
     } else {
