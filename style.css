@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    overflow: hidden;
 }
 
 
@@ -159,7 +160,7 @@ ul {
     font-size: 20px;
 }
 
-.digital{
+.digital {
     width: 100%;
     display: flex;
     align-items: center;
@@ -178,30 +179,27 @@ ul {
     }
 
     ul {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 220px;
+        height: 100vh;
+        background: #fffcfc;
         flex-direction: column;
-        position: absolute;
-        background: #ffffff;
-        font-weight: normal;
-        top: 0px;
-        right: 0px;
-        padding: 25px 20px;
-        border-radius: 3px 0px 0px 3px;
-        gap: 20px;
-        transform: translateX(100%);
-        transition: transform 0.7s ease-in-out;
-        display: flex;
+        padding: 80px 20px;
+        gap: 25px;
+        transition: 0.5s ease;
+        z-index: 1;
     }
 
     ul.active {
-        display: flex;
-        transform: translateX(0)
+       right: 0;
     }
 
-    div {
+    .tsbtn{
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: 15px;
     }
 
     .signbtn {
@@ -211,6 +209,7 @@ ul {
     .toggle {
         display: block;
         font-size: 25px;
+        cursor: pointer;
     }
 
     /* Slider ======= */

@@ -1,4 +1,5 @@
 let body = document.querySelector("body");
+let nav = document.querySelector("nav");
 let ul = document.querySelector("ul");
 let toggle = document.getElementById("toggle")
 
@@ -17,7 +18,7 @@ let next = document.getElementById("next");
 
 
 
-toggle.addEventListener("click", () => {
+nav.addEventListener("click", () => {
 
     ul.classList.toggle("active");
 })
